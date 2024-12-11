@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Language Detection</title>
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    video, canvas {
+      display: block;
+      margin: 10px auto;
+      max-width: 100%;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sign Language Detection</h1>
+  
+  <!-- Video Preview -->
+  <video id="camera" autoplay muted playsinline></video>
+  
+  <!-- Controls -->
+  <button id="startRecording">Start Recording</button>
+  <button id="stopRecording" disabled>Stop Recording</button>
+  
+  <!-- Output -->
+  <canvas id="frameCanvas"></canvas>
+  <div id="output">Waiting for input...</div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
